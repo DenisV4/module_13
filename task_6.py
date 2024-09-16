@@ -1,6 +1,5 @@
 print('Задача 6. Яйца\n')
 
-
 # В рамках программы колонизации Марса
 # компания «Спейс Инжиниринг» вывела особую породу черепах,
 # которые, по задумке, должны размножаться, откладывая яйца в марсианском грунте.
@@ -31,8 +30,10 @@ print('Задача 6. Яйца\n')
 #
 # Приблизительная глубина безопасной кладки: 0.732421875 м
 
+
 def get_danger(depth):
     return depth ** 3 - 3 * depth ** 2 - 12 * depth + 10
+
 
 def get_depth(danger_level):
     min_depth = 0.1
@@ -51,6 +52,7 @@ def get_depth(danger_level):
 
     return (min_depth + max_depth) / 2
 
+
 while True:
     danger_level = float(input("Введите максимально допустимый уровень опасности: "))
     if 0 < danger_level < 1:
@@ -58,4 +60,5 @@ while True:
 
     print("Неверные данные. Повторите ввод.\n")
 
-print(f"\nПриблизительная глубина безопасной кладки: {get_depth(danger_level)} м")
+depth = get_depth(danger_level)
+print(f"\nПриблизительная глубина безопасной кладки: {depth} м")

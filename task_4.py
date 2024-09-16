@@ -1,5 +1,3 @@
-from unittest import removeResult
-
 print('Задача 4. Недоделка 2\n')
 
 # Вы всё так же работаете в конторе по разработке игр и смотрите различные программы прошлого горе-программиста.
@@ -30,12 +28,14 @@ def count_numbers(num):
 
     return count
 
+
 def change_number(num):
     first_digit = num // 10 ** (count_numbers(num) - 1)
     last_digit = num % 10
     between_digits = num % 10 ** (count_numbers(num) - 1) // 10
 
     return last_digit * 10 ** (count_numbers(num) - 1) + between_digits * 10 + first_digit
+
 
 def main():
     while True:
@@ -48,5 +48,6 @@ def main():
     print("\nИзменённое первое число:", change_number(num_1))
     print("Изменённое второе число:", change_number(num_2))
     print("\nСумма чисел:", change_number(num_1) + change_number(num_2))
+
 
 main()

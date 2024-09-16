@@ -19,14 +19,22 @@ print('Задача 3. Число наоборот 2\n')
 # Сумма: 522
 # Сумма наоборот: 225
 
+
 def reverse_number(number):
     return int(str(number)[::-1].lstrip("0"))
+
 
 first_num = int(input("Введите первое число: "))
 second_num = int(input("Введите второе число: "))
 print()
 
-print("Первое число наоборот:", reverse_number(first_num))
-print("Второе число наоборот:", reverse_number(second_num), "\n")
-print("Сумма:", reverse_number(first_num) + reverse_number(second_num))
-print("Сумма наоборот:", reverse_number(reverse_number(first_num) + reverse_number(second_num)))
+first_reversed = reverse_number(first_num)
+second_reversed = reverse_number(second_num)
+
+print("Первое число наоборот:", first_reversed)
+print("Второе число наоборот:", second_reversed, "\n")
+
+reversed_num_sum = first_reversed + second_reversed
+
+print("Сумма:", reversed_num_sum)
+print("Сумма наоборот:", reverse_number(reversed_num_sum))

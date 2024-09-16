@@ -22,6 +22,7 @@ print('Задача 1. Урок информатики 2\n')
 # Введите число: 0.0012
 # Формат плавающей точки: x = 1.2 * 10 ** -3
 
+
 def to_scientific_notation(num):
     counter = 0
 
@@ -38,9 +39,11 @@ def to_scientific_notation(num):
 
     return f"x = {round(num, 10)} * 10 ** {counter}"
 
+
 while True:
     number = float(input("Введите введите число: "))
     if number > 0:
         break
 
-print("Формат плавающей точки:", to_scientific_notation(number))
+num_scientific_notation = to_scientific_notation(number)
+print("Формат плавающей точки:", num_scientific_notation)
